@@ -28,7 +28,7 @@ func (scheduler *Scheduler) JobType() string {
 
 func (scheduler *Scheduler) Enabled(cfg *model.Config) bool {
 	// Only enabled when ExtendSessionLengthWithActivity is enabled.
-	return *cfg.AnnouncementSettings.AdminNoticesEnabled || *cfg.AnnouncementSettings.UserNoticesEnabled
+	return false
 }
 
 func (scheduler *Scheduler) NextScheduleTime(cfg *model.Config, now time.Time, pendingJobs bool, lastSuccessfulJob *model.Job) *time.Time {
