@@ -14,15 +14,15 @@ import (
 
 	"testing"
 
-	"github.com/mattermost/mattermost-server/v5/config"
-	"github.com/mattermost/mattermost-server/v5/mlog"
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/store"
-	"github.com/mattermost/mattermost-server/v5/store/localcachelayer"
-	"github.com/mattermost/mattermost-server/v5/store/sqlstore"
-	"github.com/mattermost/mattermost-server/v5/store/storetest/mocks"
-	"github.com/mattermost/mattermost-server/v5/testlib"
-	"github.com/mattermost/mattermost-server/v5/utils"
+	"github.com/spline-fu/mattermost-server/v5/config"
+	"github.com/spline-fu/mattermost-server/v5/mlog"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/store"
+	"github.com/spline-fu/mattermost-server/v5/store/localcachelayer"
+	"github.com/spline-fu/mattermost-server/v5/store/sqlstore"
+	"github.com/spline-fu/mattermost-server/v5/store/storetest/mocks"
+	"github.com/spline-fu/mattermost-server/v5/testlib"
+	"github.com/spline-fu/mattermost-server/v5/utils"
 	"github.com/stretchr/testify/require"
 )
 

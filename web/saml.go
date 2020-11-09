@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mattermost/mattermost-server/v5/audit"
-	"github.com/mattermost/mattermost-server/v5/mlog"
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/audit"
+	"github.com/spline-fu/mattermost-server/v5/mlog"
+	"github.com/spline-fu/mattermost-server/v5/model"
 )
 
 func (w *Web) InitSaml() {

@@ -9,9 +9,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/mattermost/mattermost-server/v5/mlog"
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/utils"
+	"github.com/spline-fu/mattermost-server/v5/mlog"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/utils"
 	"github.com/pkg/errors"
 	"github.com/throttled/throttled"
 	"github.com/throttled/throttled/store/memstore"

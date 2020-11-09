@@ -5,8 +5,8 @@ package sqlstore
 
 import (
 	sq "github.com/Masterminds/squirrel"
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/store"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/store"
 	"time"
 
 	"github.com/pkg/errors"

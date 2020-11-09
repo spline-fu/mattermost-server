@@ -14,7 +14,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/model"
 )
 
 type RoleState struct {

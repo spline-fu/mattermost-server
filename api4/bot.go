@@ -10,8 +10,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/mattermost/mattermost-server/v5/audit"
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/audit"
+	"github.com/spline-fu/mattermost-server/v5/model"
 )
 
 func (api *API) InitBot() {

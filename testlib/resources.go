@@ -10,11 +10,11 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/model"
 	"github.com/pkg/errors"
 
-	"github.com/mattermost/mattermost-server/v5/utils"
-	"github.com/mattermost/mattermost-server/v5/utils/fileutils"
+	"github.com/spline-fu/mattermost-server/v5/utils"
+	"github.com/spline-fu/mattermost-server/v5/utils/fileutils"
 )
 
 const (

@@ -14,7 +14,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/mattermost/mattermost-server/v5/utils/fileutils"
+	"github.com/spline-fu/mattermost-server/v5/utils/fileutils"
 )
 
 func ReadTestFile(name string) ([]byte, error) {

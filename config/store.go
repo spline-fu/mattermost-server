@@ -9,8 +9,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/utils/jsonutils"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/utils/jsonutils"
 	"github.com/pkg/errors"
 )
 

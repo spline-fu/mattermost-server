@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/mattermost/mattermost-server/v5/app"
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/app"
+	"github.com/spline-fu/mattermost-server/v5/model"
 )
 
 const COMMAND_ARGS_SEPARATOR = ":"

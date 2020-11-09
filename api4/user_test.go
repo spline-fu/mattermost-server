@@ -12,10 +12,10 @@ import (
 	"time"
 
 	"github.com/dgryski/dgoogauth"
-	"github.com/mattermost/mattermost-server/v5/app"
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/services/mailservice"
-	"github.com/mattermost/mattermost-server/v5/utils/testutils"
+	"github.com/spline-fu/mattermost-server/v5/app"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/services/mailservice"
+	"github.com/spline-fu/mattermost-server/v5/utils/testutils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

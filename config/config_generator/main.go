@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mattermost/mattermost-server/v5/config/config_generator/generator"
+	"github.com/spline-fu/mattermost-server/v5/config/config_generator/generator"
 )
 
 func main() {

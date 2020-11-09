@@ -8,10 +8,10 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/store"
-	"github.com/mattermost/mattermost-server/v5/store/sqlstore"
-	"github.com/mattermost/mattermost-server/v5/store/storetest"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/store"
+	"github.com/spline-fu/mattermost-server/v5/store/sqlstore"
+	"github.com/spline-fu/mattermost-server/v5/store/storetest"
 )
 
 type storeType struct {

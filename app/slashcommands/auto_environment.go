@@ -7,9 +7,9 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/mattermost/mattermost-server/v5/app"
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/utils"
+	"github.com/spline-fu/mattermost-server/v5/app"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/utils"
 )
 
 type TestEnvironment struct {

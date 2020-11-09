@@ -5,8 +5,8 @@
 package plugintest
 
 import (
-	model "github.com/mattermost/mattermost-server/v5/model"
-	plugin "github.com/mattermost/mattermost-server/v5/plugin"
+	model "github.com/spline-fu/mattermost-server/v5/model"
+	plugin "github.com/spline-fu/mattermost-server/v5/plugin"
 	mock "github.com/stretchr/testify/mock"
 )
 

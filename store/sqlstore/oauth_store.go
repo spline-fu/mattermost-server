@@ -8,8 +8,8 @@ import (
 	"fmt"
 
 	"github.com/mattermost/gorp"
-	"github.com/mattermost/mattermost-server/v5/model"
-	"github.com/mattermost/mattermost-server/v5/store"
+	"github.com/spline-fu/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/store"
 
 	"github.com/pkg/errors"
 )

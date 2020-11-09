@@ -9,8 +9,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/mattermost/mattermost-server/v5/audit"
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/audit"
+	"github.com/spline-fu/mattermost-server/v5/model"
 )
 
 var RolesCmd = &cobra.Command{

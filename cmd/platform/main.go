@@ -8,7 +8,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/mattermost/mattermost-server/v5/utils/fileutils"
+	"github.com/spline-fu/mattermost-server/v5/utils/fileutils"
 )
 
 func main() {

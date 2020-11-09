@@ -8,9 +8,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/mattermost/mattermost-server/v5/audit"
-	"github.com/mattermost/mattermost-server/v5/config"
-	"github.com/mattermost/mattermost-server/v5/mlog"
+	"github.com/spline-fu/mattermost-server/v5/audit"
+	"github.com/spline-fu/mattermost-server/v5/config"
+	"github.com/spline-fu/mattermost-server/v5/mlog"
 	"github.com/spf13/cobra"
 )
 

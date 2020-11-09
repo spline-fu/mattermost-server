@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/mattermost/mattermost-server/v5/einterfaces"
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/einterfaces"
+	"github.com/spline-fu/mattermost-server/v5/model"
 	"github.com/stretchr/testify/require"
 )
 

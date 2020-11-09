@@ -4,7 +4,7 @@
 package interfaces
 
 import (
-	"github.com/mattermost/mattermost-server/v5/model"
+	"github.com/spline-fu/mattermost-server/v5/model"
 )
 
 type IndexerJobInterface interface {
