@@ -20,6 +20,8 @@ import (
 	"github.com/gorilla/websocket"
 	"github.com/mattermost/go-i18n/i18n"
 	goi18n "github.com/mattermost/go-i18n/i18n"
+	"github.com/opentracing/opentracing-go/ext"
+	spanlog "github.com/opentracing/opentracing-go/log"
 	"github.com/spline-fu/mattermost-server/v5/app"
 	"github.com/spline-fu/mattermost-server/v5/audit"
 	"github.com/spline-fu/mattermost-server/v5/einterfaces"
@@ -33,8 +35,6 @@ import (
 	"github.com/spline-fu/mattermost-server/v5/services/timezones"
 	"github.com/spline-fu/mattermost-server/v5/services/tracing"
 	"github.com/spline-fu/mattermost-server/v5/store"
-	"github.com/opentracing/opentracing-go/ext"
-	spanlog "github.com/opentracing/opentracing-go/log"
 )
 
 type OpenTracingAppLayer struct {
@@ -7257,28 +7257,6 @@ func (a *OpenTracingAppLayer) GetPrivateChannelsForTeam(teamId string, offset in
 
 	defer span.Finish()
 	resultVar0, resultVar1 := a.app.GetPrivateChannelsForTeam(teamId, offset, limit)
-
-	if resultVar1 != nil {
-		span.LogFields(spanlog.Error(resultVar1))
-		ext.Error.Set(span, true)
-	}
-
-	return resultVar0, resultVar1
-}
-
-func (a *OpenTracingAppLayer) GetProductNotices(userId string, teamId string, client model.NoticeClientType, clientVersion string, locale string) (model.NoticeMessages, *model.AppError) {
-	origCtx := a.ctx
-	span, newCtx := tracing.StartSpanWithParentByContext(a.ctx, "app.GetProductNotices")
-
-	a.ctx = newCtx
-	a.app.Srv().Store.SetContext(newCtx)
-	defer func() {
-		a.app.Srv().Store.SetContext(origCtx)
-		a.ctx = origCtx
-	}()
-
-	defer span.Finish()
-	resultVar0, resultVar1 := a.app.GetProductNotices(userId, teamId, client, clientVersion, locale)
 
 	if resultVar1 != nil {
 		span.LogFields(spanlog.Error(resultVar1))
@@ -14925,28 +14903,6 @@ func (a *OpenTracingAppLayer) UpdatePreferences(userId string, preferences model
 	return resultVar0
 }
 
-func (a *OpenTracingAppLayer) UpdateProductNotices() *model.AppError {
-	origCtx := a.ctx
-	span, newCtx := tracing.StartSpanWithParentByContext(a.ctx, "app.UpdateProductNotices")
-
-	a.ctx = newCtx
-	a.app.Srv().Store.SetContext(newCtx)
-	defer func() {
-		a.app.Srv().Store.SetContext(origCtx)
-		a.ctx = origCtx
-	}()
-
-	defer span.Finish()
-	resultVar0 := a.app.UpdateProductNotices()
-
-	if resultVar0 != nil {
-		span.LogFields(spanlog.Error(resultVar0))
-		ext.Error.Set(span, true)
-	}
-
-	return resultVar0
-}
-
 func (a *OpenTracingAppLayer) UpdateRole(role *model.Role) (*model.Role, *model.AppError) {
 	origCtx := a.ctx
 	span, newCtx := tracing.StartSpanWithParentByContext(a.ctx, "app.UpdateRole")
@@ -15356,43 +15312,6 @@ func (a *OpenTracingAppLayer) UpdateUserRoles(userId string, newRoles string, se
 	}
 
 	return resultVar0, resultVar1
-}
-
-func (a *OpenTracingAppLayer) UpdateViewedProductNotices(userId string, noticeIds []string) *model.AppError {
-	origCtx := a.ctx
-	span, newCtx := tracing.StartSpanWithParentByContext(a.ctx, "app.UpdateViewedProductNotices")
-
-	a.ctx = newCtx
-	a.app.Srv().Store.SetContext(newCtx)
-	defer func() {
-		a.app.Srv().Store.SetContext(origCtx)
-		a.ctx = origCtx
-	}()
-
-	defer span.Finish()
-	resultVar0 := a.app.UpdateViewedProductNotices(userId, noticeIds)
-
-	if resultVar0 != nil {
-		span.LogFields(spanlog.Error(resultVar0))
-		ext.Error.Set(span, true)
-	}
-
-	return resultVar0
-}
-
-func (a *OpenTracingAppLayer) UpdateViewedProductNoticesForNewUser(userId string) {
-	origCtx := a.ctx
-	span, newCtx := tracing.StartSpanWithParentByContext(a.ctx, "app.UpdateViewedProductNoticesForNewUser")
-
-	a.ctx = newCtx
-	a.app.Srv().Store.SetContext(newCtx)
-	defer func() {
-		a.app.Srv().Store.SetContext(origCtx)
-		a.ctx = origCtx
-	}()
-
-	defer span.Finish()
-	a.app.UpdateViewedProductNoticesForNewUser(userId)
 }
 
 func (a *OpenTracingAppLayer) UpdateWebConnUserActivity(session model.Session, activityAt int64) {

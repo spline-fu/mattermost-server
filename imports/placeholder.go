@@ -18,7 +18,4 @@ import (
 
 	// This is a placeholder so this package can be imported in Team Edition when it will be otherwise empty.
 	_ "github.com/spline-fu/mattermost-server/v5/jobs/active_users"
-
-	// This is a placeholder so this package can be imported in Team Edition when it will be otherwise empty.
-	_ "github.com/spline-fu/mattermost-server/v5/jobs/product_notices"
 )

@@ -8,9 +8,9 @@ import (
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/lib/pq"
+	"github.com/pkg/errors"
 	"github.com/spline-fu/mattermost-server/v5/model"
 	"github.com/spline-fu/mattermost-server/v5/store/storetest/mocks"
-	"github.com/pkg/errors"
 )
 
 func genStore() *mocks.Store {
@@ -35,7 +35,6 @@ func genStore() *mocks.Store {
 	mock.On("Post").Return(&mocks.PostStore{})
 	mock.On("Thread").Return(&mocks.ThreadStore{})
 	mock.On("Preference").Return(&mocks.PreferenceStore{})
-	mock.On("ProductNotices").Return(&mocks.ProductNoticesStore{})
 	mock.On("Reaction").Return(&mocks.ReactionStore{})
 	mock.On("Role").Return(&mocks.RoleStore{})
 	mock.On("Scheme").Return(&mocks.SchemeStore{})

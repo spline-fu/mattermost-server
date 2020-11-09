@@ -759,42 +759,14 @@ func requestTrialLicenseAndAckWarnMetric(c *Context, w http.ResponseWriter, r *h
 	ReturnStatusOK(w)
 }
 
+// getProductNotices is stubbed to not break the webui
 func getProductNotices(c *Context, w http.ResponseWriter, r *http.Request) {
-	c.RequireTeamId()
-	if c.Err != nil {
-		return
-	}
-
-	client, parseError := model.NoticeClientTypeFromString(r.URL.Query().Get("client"))
-	if parseError != nil {
-		c.SetInvalidParam("client")
-		return
-	}
-	clientVersion := r.URL.Query().Get("clientVersion")
-	locale := r.URL.Query().Get("locale")
-
-	notices, err := c.App.GetProductNotices(c.App.Session().UserId, c.Params.TeamId, client, clientVersion, locale)
-
-	if err != nil {
-		c.Err = err
-		return
-	}
+	var notices model.NoticeMessages
 	result, _ := notices.Marshal()
 	_, _ = w.Write(result)
 }
 
+// updateViewedProductNotices is stubbed to not break the webui
 func updateViewedProductNotices(c *Context, w http.ResponseWriter, r *http.Request) {
-	auditRec := c.MakeAuditRecord("updateViewedProductNotices", audit.Fail)
-	defer c.LogAuditRec(auditRec)
-	c.LogAudit("attempt")
-
-	ids := model.ArrayFromJson(r.Body)
-	err := c.App.UpdateViewedProductNotices(c.App.Session().UserId, ids)
-	if err != nil {
-		c.Err = err
-		return
-	}
-
-	auditRec.Success()
 	ReturnStatusOK(w)
 }
